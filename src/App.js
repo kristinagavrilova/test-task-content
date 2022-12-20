@@ -36,11 +36,7 @@ function App() {
         }
 
         if (keys.length > 0) {
-            if (Number.isInteger(+key) && newContent['content']) {
-                modifyContent(newContent['content'][key], keys.join('.'), value)
-            } else {
-                modifyContent(newContent[key], keys.join('.'), value)
-            }
+            modifyContent(newContent[key], keys.join('.'), value)
         } else {
             if (Number.isInteger(+key)) {
                 value = value.replaceAll(`'`, `"`)
